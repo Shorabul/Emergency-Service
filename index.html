@@ -21,7 +21,13 @@
         /* --color-clifford: #da373d; */
          --font-hind-madurai: "Hind Madurai", sans-serif;
          --font-inter: "Inter", sans-serif;
-      }
+        }
+        .bg-custom-gradient {
+        background: linear-gradient(90deg,
+        rgba(1,49,35,1), 
+        rgba(0,103,71,1) 50%, 
+        rgba(1,50,35,1) 100%);
+        }
     </style>
 </head>
 
@@ -51,8 +57,21 @@
             </div>
         </nav>
     </header>
+    <main class="mt-[25px]">
+        <!-- banner -->
+        <section class="bg-custom-gradient text-white py-[21px] flex flex-col justify-center items-center">
+            <img class="h-[92px] w-[92px]" src="./assets/logo-dark.png" alt="">
+            <h1 class="font-bold text-[40px] text-center">Emergency Service Directory</h1>
+            <p class="font-semibold text-xl text-center">Government Emergency Services at Your Fingertip – A Project by
+                Government
+                of the People’s Republic of
+                Bangladesh</p>
+        </section>
+        <!-- banner end -->
+    </main>
 
-    <script src="./script/home.js"></script>
+    <script src=" ./script/home.js">
+    </script>
 </body>
 
 </html>
