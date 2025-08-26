@@ -13,17 +13,45 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <style type="text/tailwindcss">
         @theme {
         /* --color-clifford: #da373d; */
          --font-hind-madurai: "Hind Madurai", sans-serif;
+         --font-inter: "Inter", sans-serif;
       }
     </style>
 </head>
 
-<body>
+<body class="font-hind-madurai">
+    <header class="mt-6">
+        <nav class="flex flex-col justify-between items-center gap-5 md:flex-row max-w-[1500px] m-auto">
+            <div class="flex gap-[10px] w-[136px] h-[50px]">
+                <img class="h-full" src="./assets/logo.png" alt="">
+                <h1 class="text-[#006747] font-extrabold">Emergency Service</h1>
+            </div>
+            <div class="flex justify-center items-center gap-5">
+                <div
+                    class="bg-[#41ff6b1a] flex justify-center items-center gap-[10px] w-[123px] h-[52px] rounded-[50px]">
+                    <p class="font-inter font-black">0</p>
+                    <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
+                </div>
+                <div
+                    class="bg-[#41ff6b1a] flex justify-center items-center gap-[10px] w-[123px] h-[52px] rounded-[50px]">
+                    <p class="font-inter font-black">100</p>
+                    <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
+                </div>
+                <div
+                    class="bg-[#00A63E] text-white font-inter font-semibold flex justify-center items-center gap-[10px] w-[123px] h-[52px] rounded-[50px]">
+                    <p class="">0</p>
+                    <p class="">Copy</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <script src="./script/home.js"></script>
 </body>
 
