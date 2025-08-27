@@ -26,10 +26,10 @@ document.getElementById('card-container').addEventListener('click', function (e)
             setInnerTextById('coin-number', coinNumber);
             const newCallHistory = document.createElement('div');
             newCallHistory.innerHTML = `
-            <div class="bg-[#fafafa] rounded-lg p-4 flex justify-between items-center">
-                <div>
-                    <h3 class="text-[#111111]">${e.target.parentNode.parentNode.children[1].innerText}</h3>
-                    <p>${e.target.parentNode.parentNode.children[3].innerText}</p>
+            <div class="bg-[#fafafa] text-[#111111] text-[18px] rounded-lg p-4 flex justify-between items-center gap-4">
+                <div class="">
+                    <h3 class="font-semibold">${e.target.parentNode.parentNode.children[1].innerText}</h3>
+                    <p class="font-inter text-[#5C5C5C]">${e.target.parentNode.parentNode.children[3].innerText}</p>
                 </div>
                 <p>${new Date().toLocaleTimeString()}</p>
             </div>
