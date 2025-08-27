@@ -21,7 +21,7 @@ document.getElementById('card-container').addEventListener('click', function (e)
     if (e.target.className.includes('call-btn')) {
         let coinNumber = Number(getInnerTextByID('coin-number'));
         if (coinNumber >= 20) {
-            alert(`Calling ${e.target.parentNode.parentNode.children[2].innerText} ${e.target.parentNode.parentNode.children[3].innerText}...`);
+            alert(`📞 Calling ${e.target.parentNode.parentNode.children[2].innerText} ${e.target.parentNode.parentNode.children[3].innerText}...`);
             coinNumber -= 20;
             setInnerTextById('coin-number', coinNumber);
             const newCallHistory = document.createElement('div');
@@ -36,7 +36,7 @@ document.getElementById('card-container').addEventListener('click', function (e)
             `;
             getElementByID('call-history-container').appendChild(newCallHistory);
         } else {
-            alert(`Call unavailable! Please make sure you have 20 or more coins.`);
+            alert(`❌ Call unavailable! Please make sure you have 20 or more coins.`);
         }
     }
     if (e.target.className.includes('copy-btn')) {
