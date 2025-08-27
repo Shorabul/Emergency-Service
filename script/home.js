@@ -31,13 +31,21 @@ document.getElementById('card-container').addEventListener('click', function (e)
                     <h3 class="text-[#111111]">${e.target.parentNode.parentNode.children[1].innerText}</h3>
                     <p>${e.target.parentNode.parentNode.children[3].innerText}</p>
                 </div>
-                <p>11:26.58 AM</p>
+                <p>${new Date().toLocaleTimeString()}</p>
             </div>
             `;
             getElementByID('call-history-container').appendChild(newCallHistory);
         } else {
             alert(`Call unavailable! Please make sure you have 20 or more coins.`);
         }
+    }
+    if (e.target.className.includes('copy-btn')) {
+        const phoneNumber = e.target.parentNode.parentNode.children[3].innerText;
+        navigator.clipboard.writeText(phoneNumber);
+        alert(`Number copied: ${phoneNumber}`);
+        let copyNumber = getInnerTextByID('copy-number');
+        let currentCopyNumber = Number(copyNumber) + 1;
+        setInnerTextById('copy-number', currentCopyNumber);
     }
 });
 
