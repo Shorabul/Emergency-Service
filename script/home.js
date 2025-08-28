@@ -10,9 +10,17 @@ function getInnerTextByClassName(className) {
 function getElementByID(id) {
     return document.getElementById(id);
 }
+const heartImg = getElementByID('heart-img').src;
 document.getElementById('card-container').addEventListener('click', function (e) {
     //heart
     if (e.target.className.includes('heart-icon')) {
+        const img = document.createElement('img');
+        img.classList.add('heart-icon', 'w-8', 'active:-translate-y-1', 'active:scale-110');
+        img.setAttribute('src', heartImg);
+        e.target.parentNode.appendChild(img);
+        e.target.remove();
+
+        const div = document.createElement('div');
         const numberOFHearts = getInnerTextByID('hearts-number');
         const currentNumberOfHearts = Number(getInnerTextByID('hearts-number')) + 1;
         setInnerTextById('hearts-number', currentNumberOfHearts);
@@ -26,7 +34,7 @@ document.getElementById('card-container').addEventListener('click', function (e)
             setInnerTextById('coin-number', coinNumber);
             const newCallHistory = document.createElement('div');
             newCallHistory.innerHTML = `
-            <div class="bg-[#fafafa] text-[#111111] text-[18px] rounded-lg p-4 flex justify-between items-center gap-4">
+            <div class="bg-[#fafafa] text-[#111111] md:text-[18px] rounded-lg p-4 flex justify-between items-center gap-4">
                 <div class="">
                     <h3 class="font-semibold">${e.target.parentNode.parentNode.children[1].innerText}</h3>
                     <p class="font-inter text-[#5C5C5C]">${e.target.parentNode.parentNode.children[3].innerText}</p>
@@ -47,8 +55,22 @@ document.getElementById('card-container').addEventListener('click', function (e)
         let currentCopyNumber = Number(copyNumber) + 1;
         setInnerTextById('copy-number', currentCopyNumber);
     }
+
+
 });
 
 getElementByID('clear-btn').addEventListener('click', function () {
     getElementByID('call-history-container').innerText = '';
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelector('.nav-links');
+    const manu = document.getElementById('manu');
+    const header = document.getElementById('hr');
+
+    manu.addEventListener('click', function () {
+        navLinks.classList.toggle('top-[90px]');
+        header.classList.toggle('pb-30');
+        header.classList.toggle('pt-6');
+    });
 });

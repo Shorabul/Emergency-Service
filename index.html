@@ -33,45 +33,59 @@
 </head>
 
 <body class="font-hind-madurai bg-[#f5fff6] min-h-[100vw]">
-    <header class="py-6 bg-white ">
-        <nav class="flex flex-col justify-between items-center gap-5 md:flex-row w-[92vw] m-auto">
-            <div class="flex justify-center items-center gap-[10px] w-[136px] h-[50px]">
+
+    <header id="hr" class="py-6 bg-white ">
+        <nav class="flex justify-between md:justify-between items-center w-[92%] m-auto">
+            <div class="flex items-center gap-2 md:gap-[10px] w-[136px] h-[45px] md:h-[50px]">
                 <img class="h-full" src="./assets/logo.png" alt="logo">
-                <h1 class="text-[#006747] text-[24px] leading-6 font-extrabold">Emergency Service</h1>
+                <h1 class="text-[#006747] text-[16px] md:text-[24px] leading-6 font-extrabold">Emergency Service</h1>
             </div>
-            <div class="flex justify-center items-center gap-1 md:gap-5">
-                <div
-                    class="bg-[#41ff6b1a] flex justify-center items-center gap-[10px] w-[100px] md:w-[123px] h-[52px] rounded-[50px]">
-                    <p id="hearts-number" class="font-inter font-black">0</p>
-                    <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
-                </div>
-                <div
-                    class="bg-[#41ff6b1a] flex justify-center items-center gap-[10px] w-[100px] md:w-[123px] h-[52px] rounded-[50px]">
-                    <p id="coin-number" class="font-inter font-black">100</p>
-                    <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
-                </div>
-                <div
-                    class="bg-[#00A63E] text-white font-inter font-semibold flex justify-center items-center gap-[10px] w-[100px] md:w-[123px] h-[52px] rounded-[50px]">
-                    <p id="copy-number" class="">0</p>
-                    <p class="">Copy</p>
-                </div>
+            <div
+                class="md:static absolute bg-white left-0 top-[-100%] w-full h-[98px] md:h-0 py-5 md:py-0 md:w-auto flex justify-center items-center nav-links">
+                <ul class="flex items-center gap-6 md:gap-[5vw]">
+                    <li
+                        class="bg-[#41ff6b1a] text-[14px] md:text-[16px] flex justify-center items-center gap-[10px] w-[107px] md:w-[127px] h-[52px] rounded-[50px]">
+                        <p id="hearts-number" class="font-inter font-black">0</p>
+                        <img id="heart-img" class="w-[25px] h-[25px] md:w-[30px] md:h-[30px]" src="./assets/heart.png"
+                            alt="">
+                    </li>
+                    <li
+                        class="bg-[#41ff6b1a] text-[14px] md:text-[16px] flex justify-center items-center gap-[10px] w-[107px] md:w-[127px] h-[52px] rounded-[50px]">
+                        <p id="coin-number" class="font-inter font-black">100</p>
+                        <img class="w-[25px] h-[25px] md:w-[30px] md:h-[30px]" src="./assets/coin.png" alt="">
+                    </li>
+                    <li
+                        class="bg-[#00A63E] text-white text-[14px] md:text-[16px] font-inter font-semibold flex justify-center items-center gap-[10px] w-[107px] h-[42px] md:w-[127px] md:h-[52px] rounded-[50px]">
+                        <p id="copy-number" class="">0</p>
+                        <p class="">Copy</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <i id="manu" class="fa-solid fa-bars cursor-pointer"></i>
             </div>
         </nav>
     </header>
+
     <main class="">
+
         <!-- banner -->
         <section class="bg-banner-gradient text-white py-[21px] flex flex-col justify-center items-center">
-            <img class="h-[92px] w-[92px]" src="./assets/logo-dark.png" alt="">
-            <h1 class="font-bold text-center text-[40px]">Emergency Service Directory</h1>
-            <p class="font-semibold text-center text-[20px]">Government Emergency Services at Your Fingertip – A
-                Project by
-                Government
-                of the People’s Republic of
-                Bangladesh</p>
+            <div class="text-white py-[21px] flex flex-col justify-center items-center px-5">
+                <img class="h-[82px] w-[82] md:h-[92px] md:w-[92px]" src="./assets/logo-dark.png" alt="">
+                <h1 class="font-bold text-center text-[30px] md:text-[40px]">Emergency Service Directory</h1>
+                <p class="text-center md:text-[20px]">Government Emergency Services at Your Fingertip – A
+                    Project by
+                    Government
+                    of the People’s Republic of
+                    Bangladesh</p>
+            </div>
         </section>
         <!-- banner end -->
+
         <!-- card and cart -->
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[30px] pt-[44px] pb-[86px] w-[92vw] m-auto">
+
             <!-- card section -->
             <section class="order-2 md:order-1  md:col-span-2 lg:col-span-9">
                 <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
@@ -80,16 +94,22 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/emergency.png" alt="emergency icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/emergency.png" alt="emergency icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
+
                         </figure>
-                        <h2 class="card-title mt-4">National Emergency Number</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">National Emergency Service</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">999</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">National Emergency Number</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">National Emergency Service</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">999</p>
                         <div class="flex justify-start items-center">
-                            <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">All</p>
+                            <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl md:text-[18px] py-[6px] px-4">All
+                            </p>
                         </div>
                         <div class="font-roboto flex justify-between items-center gap-2 w-full mt-6">
                             <button
@@ -97,7 +117,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -105,14 +125,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#DFEFFF] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/police.png" alt="police icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#DFEFFF] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/police.png" alt="police icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Police Helpline Number</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Police</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">999</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Police Helpline Number</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Police</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">999</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Police
                             </p>
@@ -123,7 +147,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -131,14 +155,19 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/fire-service.png" alt="fire-service icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/fire-service.png"
+                                    alt="fire-service icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Fire Service Number</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Fire Service</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">999</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Fire Service Number</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Fire Service</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">999</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Fire</p>
                         </div>
@@ -148,7 +177,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -156,14 +185,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/ambulance.png" alt="ambulance icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/ambulance.png" alt="ambulance icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Ambulance Service</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Ambulance</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">1994-999999</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Ambulance Service</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Ambulance</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">1994-999999</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Health
                             </p>
@@ -174,7 +207,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -182,14 +215,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/emergency.png" alt="emergency icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/emergency.png" alt="emergency icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Women & Child Helpline</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Women & Child Helpline</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">109</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Women & Child Helpline</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Women & Child Helpline</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">109</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Help</p>
                         </div>
@@ -199,7 +236,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -207,14 +244,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/emergency.png" alt="emergency icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/emergency.png" alt="emergency icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Anti-Corruption Helpline</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Anti-Corruption Commission</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">106</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Anti-Corruption Helpline</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Anti-Corruption Commission</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">106</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Govt.
                             </p>
@@ -225,7 +266,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -233,14 +274,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/emergency.png" alt="emergency icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/emergency.png" alt="emergency icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Electricity Helpline</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Electricity Outage</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">16216</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Electricity Helpline</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Electricity Outage</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">16216</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">
                                 Electricity
@@ -252,7 +297,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -260,14 +305,18 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/brac.png" alt="brac icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/brac.png" alt="brac icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Brac Helpline</h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Brac</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">16445</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Brac Helpline</h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Brac</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">16445</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">NGO</p>
                         </div>
@@ -277,7 +326,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -285,14 +334,19 @@
                     <div
                         class="rounded-xl bg-base-100 shadow-lg p-[32px] hover:shadow-xl transition-shadow duration-300">
                         <figure class="flex justify-between items-center">
-                            <div class="h-[60px] w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
-                                <img class="h-8 w-8" src="./assets/Bangladesh-Railway.png" alt="emergency icon" />
+                            <div
+                                class="h-[50px] md:h-[60px] w-[50px] md:w-[60px] bg-[#FFE3E2] flex justify-center items-center rounded-2xl">
+                                <img class="h-7 md:h-8 w-7 md:w-8" src="./assets/Bangladesh-Railway.png"
+                                    alt="emergency icon" />
                             </div>
-                            <i class="fa-solid fa-heart text-2xl heart-icon"></i>
+                            <div id="heart-container">
+                                <i
+                                    class="fa-regular fa-heart text-xl md:text-2xl heart-icon hover:-translate-y-1 scale-110"></i>
+                            </div>
                         </figure>
-                        <h2 class="card-title mt-4">Bangladesh Railway Helpline </h2>
-                        <p class="text-[#5c5c5c] font-roboto text-[18px] mb-6">Bangladesh Railway</p>
-                        <p class="text-[#111111] font-roboto font-bold text-[32px]">163</p>
+                        <h2 class="text-[#111111] card-title mt-4 text-lg md:text-2xl">Bangladesh Railway Helpline </h2>
+                        <p class="text-[#5c5c5c] font-roboto md:text-[18px] mb-6">Bangladesh Railway</p>
+                        <p class="text-[#111111] font-roboto font-bold text-[22px] md:text-[32px]">163</p>
                         <div class="flex justify-start items-center">
                             <p class="inline bg-[#f2f2f2] text-[#5c5c5c] rounded-3xl text-[18px] py-[6px] px-4">Travel
                             </p>
@@ -303,7 +357,7 @@
                                 <i class="fa-regular fa-copy"></i> Copy
                             </button>
                             <button
-                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#009237] hover:shadow-lg transition-all duration-300 call-btn">
+                                class="btn bg-[#00a63e] text-white w-[50%] py-[10px] px-[30px] rounded-lg hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300 call-btn">
                                 <i class="fa-solid fa-phone"></i> Call
                             </button>
                         </div>
@@ -312,24 +366,30 @@
                 </div>
             </section>
             <!-- card section end-->
+
             <!-- History section -->
             <aside class="order-1 md:order-2 md:col-span-2 lg:col-span-3 bg-white p-6 rounded-xl">
                 <div class="flex justify-between">
                     <div class="flex items-center gap-2">
-                        <i class="fa-regular fa-clock text-[24px] text-[#5C5C5C]"></i>
-                        <p class="font-roboto text-[#111111] font-medium text-[20px]">Call History</p>
+                        <i class="fa-regular fa-clock  md:text-[24px] text-[#5C5C5C]"></i>
+                        <p class="font-roboto text-[#111111] font-medium md:text-[20px]">Call History</p>
                     </div>
                     <button id="clear-btn"
-                        class="btn bg-[#00A63E] font-semibold text-white py-3 px-9 w-[114px] h-[52px] rounded-[50px]">Clear</button>
+                        class="btn bg-[#00A63E] font-semibold text-white py-3 px-9 w-[104px] md:w-[114px] h-[42px] md:h-[52px] rounded-[50px] hover:bg-[#A9A9A9] hover:shadow-lg transition-all duration-300">Clear</button>
                 </div>
                 <div id="call-history-container" class="mt-4 flex flex-col gap-2">
                 </div>
             </aside>
             <!-- History section end -->
+
         </section>
+        <!-- card and cart end-->
+
     </main>
+
     <script src=" ./script/home.js">
     </script>
+
 </body>
 
 </html>
